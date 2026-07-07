@@ -82,3 +82,6 @@ img{max-width:100%;display:block}
 }
 
 .ig-icon{width:16px;height:16px;display:block;stroke-linecap:round;stroke-linejoin:round}.contact-icon{display:inline-flex;width:1.1em;height:1.1em;align-items:center;justify-content:center;color:var(--gold);vertical-align:-.18em;margin-right:3px}.contact-icon .ig-icon{width:1.05em;height:1.05em}
+
+/* Ajuste Mai: se retira formulario no funcional y se reemplaza por contacto directo */
+.contact-direct h3{font-size:1.3rem;margin:0 0 12px}.contact-direct p{margin:0 0 18px;color:#f8f5ee;max-width:430px}.contact-direct__actions{display:grid;gap:10px}.contact-direct .btn{width:100%;min-height:42px}.btn--light{color:#f8f5ee;border-color:rgba(244,213,154,.85)}.contact-direct small{display:block;margin-top:12px;color:rgba(255,255,255,.72);font-size:.74rem}

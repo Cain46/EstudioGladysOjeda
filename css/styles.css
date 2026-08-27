@@ -85,3 +85,68 @@ img{max-width:100%;display:block}
 
 /* Ajuste Mai: se retira formulario no funcional y se reemplaza por contacto directo */
 .contact-direct h3{font-size:1.3rem;margin:0 0 12px}.contact-direct p{margin:0 0 18px;color:#f8f5ee;max-width:430px}.contact-direct__actions{display:grid;gap:10px}.contact-direct .btn{width:100%;min-height:42px}.btn--light{color:#f8f5ee;border-color:rgba(244,213,154,.85)}.contact-direct small{display:block;margin-top:12px;color:rgba(255,255,255,.72);font-size:.74rem}
+
+
+/* Formulario de contacto Web3Forms - integración aislada */
+.contact-form-wrap{width:100%}
+.contact-form{max-width:100%}
+.contact-form h3{font-size:1.3rem;margin:0 0 14px;color:#fff}
+.contact-form__group{margin:0}
+.contact-form label{display:block;margin:0 0 6px;color:#f8f5ee;font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:none}
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+  width:100%;
+  border:1px solid rgba(189,148,80,.55);
+  border-radius:3px;
+  background:#fff;
+  color:#111;
+  padding:10px 12px;
+  font-family:Montserrat,Arial,sans-serif;
+  font-size:.9rem;
+  margin-bottom:12px;
+  outline:none;
+  transition:border-color .2s, box-shadow .2s;
+}
+.contact-form textarea{resize:vertical;min-height:110px}
+.contact-form select{min-height:42px}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(189,148,80,.18);
+}
+.contact-form__consent{
+  display:flex!important;
+  align-items:flex-start;
+  gap:9px;
+  margin:2px 0 14px!important;
+  color:#f8f5ee!important;
+  font-size:.72rem!important;
+  line-height:1.45;
+  letter-spacing:0!important;
+  font-weight:400!important;
+}
+.contact-form__consent input{
+  width:16px;
+  height:16px;
+  flex:0 0 auto;
+  margin:2px 0 0;
+  accent-color:var(--gold);
+}
+.contact-form__submit{width:100%;min-height:42px}
+.contact-form__status{
+  min-height:1.5em;
+  margin:12px 0 4px;
+  font-size:.78rem;
+  line-height:1.45;
+  color:#f8f5ee;
+}
+.contact-form__status.is-success{color:#d8f5df}
+.contact-form__status.is-error{color:#ffd0ca}
+.contact-form small{display:block;margin-top:8px;color:rgba(255,255,255,.72);font-size:.72rem}
+.contact-form__botcheck{display:none!important}
+
+@media(max-width:640px){
+  .contact-form .form-row{grid-template-columns:1fr}
+}

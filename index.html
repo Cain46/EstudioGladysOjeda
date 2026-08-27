@@ -147,15 +147,65 @@
           <strong>Gladys Ojeda Villalba<br>& Asociados</strong>
           <span>Estudio Jurídico Contable</span>
         </div>
-        <div class="contact-direct reveal">
-          <h3>Contactanos</h3>
-          <p>Para solicitar un turno o realizar una consulta, comunicate directamente por WhatsApp, teléfono o email.</p>
-          <div class="contact-direct__actions">
-            <a class="btn btn--gold" href="https://wa.me/5491160497809?text=Hola%2C%20quiero%20solicitar%20un%20turno%20con%20el%20estudio." target="_blank" rel="noopener" aria-label="Solicitar turno por WhatsApp">Solicitar turno</a>
-            <a class="btn btn--outline btn--light" href="mailto:estudio.dra.ojeda.villalba@gmail.com" aria-label="Enviar email al estudio">Enviar email</a>
-            <a class="btn btn--outline btn--light" href="tel:+542604354163" aria-label="Llamar al estudio">Llamar ahora</a>
-          </div>
-          <small>Respuesta sujeta a disponibilidad horaria del estudio.</small>
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <h3>Escribinos</h3>
+
+            <input type="hidden" name="access_key" value="fc91fb92-6935-4e7f-b3cf-4c615b1e30e2">
+            <input type="hidden" name="subject" value="Contacto desde la pagina web - estudiogladysojeda.com">
+            <input type="checkbox" name="botcheck" class="contact-form__botcheck" tabindex="-1" autocomplete="off">
+
+            <div class="contact-form__group">
+              <label for="nombre">Nombre y apellido</label>
+              <input id="nombre" type="text" name="Nombre y apellido" autocomplete="name" required>
+            </div>
+
+            <div class="form-row">
+              <div class="contact-form__group">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" autocomplete="email" required>
+              </div>
+              <div class="contact-form__group">
+                <label for="telefono">Teléfono / WhatsApp</label>
+                <input id="telefono" type="tel" name="Teléfono / WhatsApp" autocomplete="tel" required>
+              </div>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="tipo-consulta">Tipo de consulta</label>
+              <select id="tipo-consulta" name="Tipo de consulta" required>
+                <option value="" selected disabled>Seleccioná una opción</option>
+                <option>Derecho Civil</option>
+                <option>Derecho Laboral</option>
+                <option>Derecho de Familia</option>
+                <option>Sucesiones</option>
+                <option>Jubilaciones</option>
+                <option>Asesoramiento Legal Integral</option>
+                <option>Contabilidad General</option>
+                <option>Monotributo y Autónomos</option>
+                <option>ARCA / AFIP</option>
+                <option>Impuestos</option>
+                <option>Sociedades</option>
+                <option>Asesoramiento Administrativo</option>
+                <option>Otra consulta</option>
+              </select>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="mensaje">Contanos brevemente tu consulta</label>
+              <textarea id="mensaje" name="message" rows="4" required></textarea>
+            </div>
+
+            <label class="contact-form__consent" for="consentimiento">
+              <input id="consentimiento" type="checkbox" name="Consentimiento" value="Aceptado" required>
+              <span>Acepto que mis datos sean utilizados únicamente para responder esta consulta.</span>
+            </label>
+
+            <button class="btn btn--gold contact-form__submit" type="submit">Enviar consulta</button>
+
+            <p class="contact-form__status" id="formStatus" aria-live="polite"></p>
+            <small>Para una respuesta más rápida, también podés solicitar turno por WhatsApp.</small>
+          </form>
         </div>
       </div>
     </section>

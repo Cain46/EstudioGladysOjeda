@@ -25,6 +25,21 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 
+
+const consentCheckbox = document.getElementById('consentimiento');
+const contactSubmitButton = contactForm ? contactForm.querySelector('.contact-form__submit') : null;
+
+if (consentCheckbox && contactSubmitButton) {
+  const syncConsentState = () => {
+    const enabled = consentCheckbox.checked;
+    contactSubmitButton.disabled = !enabled;
+    contactSubmitButton.setAttribute('aria-disabled', String(!enabled));
+  };
+
+  consentCheckbox.addEventListener('change', syncConsentState);
+  syncConsentState();
+}
+
 if (contactForm && formStatus) {
   contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -53,6 +68,10 @@ if (contactForm && formStatus) {
       }
 
       contactForm.reset();
+      if (consentCheckbox && contactSubmitButton) {
+        contactSubmitButton.disabled = true;
+        contactSubmitButton.setAttribute('aria-disabled', 'true');
+      }
       formStatus.classList.add('is-success');
       formStatus.textContent = '✓ Consulta enviada correctamente. Gracias por comunicarte con el Estudio Gladys Ojeda Villalba & Asociados. Nos pondremos en contacto a la brevedad.';
 
